@@ -13,13 +13,10 @@
 	<body>
 		<!-- Vue -->
 		<div id="myApp">
-			<h1>Batman Quotes</h1>
-			<ul>
-				<li v-for="{quote, author} in quotes">
-					<p>{{quote}}</p>
-					<blockquote>-{{author}}</blockquote>
-				</li>
-			</ul>
+			<h3>{{quote}}</h3>
+			<blockquote>-{{author}}</blockquote>
+
+			<button v-on:click="changeQuote">Change quote</button>
 		</div>
 		<!-- Vue -->
 
