@@ -15,8 +15,8 @@
 		<div id="myApp">
 			<h1>Batman Quotes</h1>
 			<ul>
-				<li v-for="{quote, author} in quotes">
-					<p>{{quote}}</p>
+				<li v-for="({quote, author}, index) in quotes">
+					<p>{{index + 1}} - {{quote}}</p>
 					<blockquote>-{{author}}</blockquote>
 				</li>
 			</ul>
