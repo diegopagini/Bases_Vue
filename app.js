@@ -12,7 +12,15 @@ const app = Vue.createApp({
 			author: 'Bruce Wayne',
 		};
 	},
-	methods: {},
+	methods: {
+		changeQuote() {
+			this.author = 'Batman';
+			this.capitalize();
+		},
+		capitalize() {
+			this.quote = this.quote.toUpperCase();
+		},
+	},
 	watch: {},
 	/** Composition API */
 	setup() {},
