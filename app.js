@@ -29,7 +29,17 @@ const app = Vue.createApp({
 	data() {
 		return {
 			quotes,
+			newQuote: 'Hola mundo',
 		};
+	},
+	methods: {
+		addQuote(event) {
+			if (event.key === 'Enter')
+				this.quotes.unshift({
+					quote: this.newQuote,
+					author: 'Diego',
+				});
+		},
 	},
 });
 
