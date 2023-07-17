@@ -17,7 +17,7 @@
 			<input
 				type="text"
 				v-model="newQuote"
-				v-on:keypress="addQuote"
+				v-on:keypress.enter="addQuote"
 			/>
 
 			<hr />
@@ -25,7 +25,7 @@
 			<ul>
 				<li v-for="({quote, author}, index) in quotes">
 					<p>{{index + 1}} - {{quote}}</p>
-					<blockquote>-{{author}}</blockquote>
+					<blockquote v-if="author">-{{author}}</blockquote>
 				</li>
 			</ul>
 		</div>

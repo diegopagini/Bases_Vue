@@ -33,12 +33,10 @@ const app = Vue.createApp({
 		};
 	},
 	methods: {
-		addQuote(event) {
-			if (event.key === 'Enter')
-				this.quotes.unshift({
-					quote: this.newQuote,
-					author: 'Diego',
-				});
+		addQuote() {
+			this.quotes.unshift({
+				quote: this.newQuote,
+			});
 		},
 	},
 });
